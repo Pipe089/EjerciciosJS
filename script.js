@@ -272,29 +272,6 @@ function animarError() {
 setInterval(() => {
     document.getElementById("numeroUsuario").focus();
 }, 500);
-    // Mostrar historial
-    intentosTxt.innerHTML = "<b>Historial:</b><br>" + historial.join("<br>");
-
-    // Pistas cada 3 intentos
-    if (intentos % 3 === 0 && juegoActivo) {
-        darPista();
-    }
-
-function darPista() {
-    let mensaje = document.getElementById("mensajeAdivinar");
-
-    let pista = Math.floor(Math.random() * 3);
-
-    if (pista === 0) {
-        mensaje.innerHTML += "<br>Pista: El número es " + (numeroSecreto % 2 === 0 ? "PAR" : "IMPAR");
-    } 
-    else if (pista === 1) {
-        mensaje.innerHTML += "<br>Pista: El número es " + (numeroSecreto > 50 ? "mayor que 50" : "menor o igual que 50");
-    } 
-    else {
-        mensaje.innerHTML += "<br>Pista: Está entre " + (numeroSecreto - 5) + " y " + (numeroSecreto + 5);
-    }
-}
 
 /* 4. PRESTAMO */
 function calcularPrestamo() {

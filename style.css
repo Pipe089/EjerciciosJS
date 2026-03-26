@@ -1,0 +1,403 @@
+/* ============================= */
+/* ESTILO GENERAL PROFESIONAL */
+/* ============================= */
+body {
+background: linear-gradient(135deg, #1f4037, #99f2c8);
+font-family: 'Poppins', sans-serif;
+min-height: 100vh;
+}
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+.navbar {
+box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+font-weight: 700;
+font-size: 22px;
+letter-spacing: 1px;
+transition: 0.3s;
+}
+
+.navbar-brand:hover {
+transform: scale(1.08);
+color: #99f2c8 !important;
+}
+
+.nav-link {
+transition: 0.3s;
+position: relative;
+}
+
+.nav-link:hover {
+color: #99f2c8 !important;
+}
+
+.nav-link::after {
+content: "";
+position: absolute;
+width: 0%;
+height: 2px;
+background: #99f2c8;
+left: 0;
+bottom: 0;
+transition: 0.3s;
+}
+
+.nav-link:hover::after {
+width: 100%;
+}
+
+/* ============================= */
+/* SECCIONES */
+/* ============================= */
+.seccion {
+display: none;
+background: rgba(255, 255, 255, 0.95);
+margin: 40px auto;
+padding: 30px;
+border-radius: 15px;
+width: 85%;
+box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+animation: fadeIn 0.6s ease;
+transition: 0.3s;
+}
+
+.seccion:hover {
+transform: translateY(-3px);
+box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* Animación */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(25px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* ============================= */
+/* BIENVENIDA */
+/* ============================= */
+.bienvenida {
+text-align: center;
+padding: 40px;
+}
+
+.bienvenida h1 {
+font-size: 48px;
+font-weight: 700;
+color: #1f4037;
+}
+
+.bienvenida p {
+font-size: 18px;
+color: #333;
+}
+
+/* ============================= */
+/* INPUTS */
+/* ============================= */
+input, select {
+margin: 10px 0;
+padding: 12px;
+border-radius: 10px;
+border: 1px solid #ccc;
+width: 100%;
+transition: all 0.3s ease;
+font-size: 15px;
+}
+
+input:focus, select:focus {
+border-color: #1f4037;
+box-shadow: 0 0 10px rgba(31,64,55,0.4);
+outline: none;
+transform: scale(1.02);
+}
+
+/* ============================= */
+/* BOTONES */
+/* ============================= */
+button {
+border-radius: 10px !important;
+padding: 10px 18px !important;
+transition: 0.3s !important;
+font-weight: 600;
+letter-spacing: 0.5px;
+border: none;
+}
+
+button:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Colores botones */
+.btn-success { background: #28a745 !important; }
+.btn-primary { background: #007bff !important; }
+.btn-warning { background: #f0ad4e !important; }
+.btn-danger  { background: #dc3545 !important; }
+
+/* ============================= */
+/* CAJAS DE RESULTADOS */
+/* ============================= */
+#listaEmpleados,
+#resultadoBanco,
+#mensajeAdivinar,
+#intentosAdivinar,
+#resultadoPrestamo,
+#resultadoTejado,
+#listaProductos,
+#resultadoVenta {
+margin-top: 20px;
+padding: 20px;
+background: #f8f9fa;
+border-left: 5px solid #1f4037;
+border-radius: 10px;
+box-shadow: inset 0 0 10px rgba(0,0,0,0.08);
+animation: fadeIn 0.5s ease;
+}
+
+/* ============================= */
+/* TITULOS */
+/* ============================= */
+h2 {
+font-weight: 700;
+color: #1f4037;
+margin-bottom: 20px;
+border-left: 6px solid #1f4037;
+padding-left: 12px;
+}
+
+/* ============================= */
+/* TABLAS (por si agregas luego) */
+/* ============================= */
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 15px;
+background: white;
+border-radius: 10px;
+overflow: hidden;
+}
+
+table th {
+background: #1f4037;
+color: white;
+padding: 10px;
+}
+
+table td {
+padding: 10px;
+border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+background: #f2f2f2;
+}
+
+/* ============================= */
+/* SCROLL BONITO */
+/* ============================= */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb {
+background: #1f4037;
+border-radius: 10px;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+.seccion {
+width: 95%;
+padding: 20px;
+}
+
+.bienvenida h1 {
+    font-size: 32px;
+}
+
+}
+
+/* ============================= */
+/* ESTILO GUESS THE NUMBER */
+/* ============================= */
+
+#adivinar {
+background: #121213;
+color: white;
+text-align: center;
+border-radius: 20px;
+padding: 40px;
+box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+/* Título */
+#adivinar h2 {
+color: #ffffff;
+font-size: 34px;
+margin-bottom: 25px;
+border: none;
+}
+
+/* Input */
+#adivinar input {
+width: 60%;
+margin: auto;
+text-align: center;
+font-size: 22px;
+border-radius: 10px;
+border: 2px solid #3a3a3c;
+padding: 15px;
+background: #121213;
+color: white;
+transition: 0.3s;
+}
+
+#adivinar input:focus {
+border: 2px solid #538d4e;
+box-shadow: 0 0 10px #538d4e;
+outline: none;
+}
+
+/* Botón */
+#adivinar button {
+font-size: 18px;
+padding: 12px 30px;
+border-radius: 10px;
+background: #538d4e;
+border: none;
+color: white;
+font-weight: bold;
+transition: 0.3s;
+}
+
+#adivinar button:hover {
+background: #6aaa64;
+transform: scale(1.05);
+}
+
+/* Mensajes */
+#mensajeAdivinar {
+font-size: 22px;
+font-weight: bold;
+margin-top: 25px;
+padding: 15px;
+border-radius: 10px;
+background: #1a1a1b;
+border-left: 6px solid #538d4e;
+}
+
+/* Intentos */
+#intentosAdivinar {
+font-size: 18px;
+margin-top: 15px;
+padding: 10px;
+border-radius: 10px;
+background: #1a1a1b;
+}
+
+/* Colores tipo pistas */
+.mayor {
+border-left: 6px solid #3a86ff !important;
+}
+
+.menor {
+border-left: 6px solid #ff006e !important;
+}
+
+.correcto {
+border-left: 6px solid #00ff88 !important;
+animation: ganar 1s infinite;
+}
+
+/* Animación ganar */
+@keyframes ganar {
+0% { transform: scale(1); }
+50% { transform: scale(1.03); }
+100% { transform: scale(1); }
+}
+
+#intentosAdivinar {
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #1a1a1b;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: monospace;
+    line-height: 1.6;
+    border: 1px solid #3a3a3c;
+}
+
+/* Placeholder blanco para el juego */
+#adivinar input::placeholder {
+color: #cccccc;
+opacity: 1;
+}
+
+#adivinar input {
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Fondo con GIF para el juego */
+#adivinar {
+background: url("https://media.giphy.com/media/BHNfhgU63qrks/giphy.gif");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+position: relative;
+color: white;
+}
+
+/* Oscurecer el GIF para que se vea el texto */
+#adivinar::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.7);
+border-radius: 20px;
+}
+
+/* Para que el contenido quede encima del GIF */
+#adivinar * {
+position: relative;
+z-index: 2;
+}
+
+.errorInput {
+    animation: errorAnim 0.3s;
+}
+
+@keyframes errorAnim {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+
+
